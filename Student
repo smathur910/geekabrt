@@ -1,0 +1,83 @@
+package edu.jspider.hibernetop.dto;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Id;
+import javax.persistence.Column;
+
+
+@Entity
+@Table(name="student_info")
+public class Student 
+{
+	@Id
+	@Column(name="student_Id")
+	private int studentId;
+	@Column(name="firstname")
+	private String firstName;
+	@Column(name="middleName")
+	private String middleName;
+	@Column(name="lastName")
+	private String lastName;
+	@Column(name="marks")
+	private double marks;
+	
+	
+	public Student()
+	{
+		
+		System.out.println(this.getClass().getName()+"Object Created");
+	}
+
+	public Student(int studentId2, String firstName2, String middleName2, String lastName2, double marks2) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public int getStudentId() {
+		return studentId;
+	}
+
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getMiddleName() {
+		return middleName;
+	}
+
+	public void setMiddleName(String middleName) {
+		this.middleName = middleName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public double getMarks() {
+		return marks;
+	}
+
+	public void setMarks(double marks) {
+		this.marks = marks;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [studentId=" + studentId + ", firstName=" + firstName + ", middleName=" + middleName
+				+ ", lastName=" + lastName + ", marks=" + marks + "]";
+	}
+	
+	
+}
